@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Manipulation</title>
+</head>
+<body>
+    <h1>Adding Numbers</h1>
+    
+    <div>
+        <label for="number1">Number 1:</label>
+        <input type="number" id="number1" placeholder="Enter half of ur age">
+    </div>
+    <div>
+        <label for="number2">Number 2:</label>
+        <input type="number" id="number2" placeholder="Enter other half of ur age">
+    </div>
+    <button onclick="addNumbers()">Add Numbers</button>
+    
+    <div id="results">
+        <p id="sumResult"></p>
+    </div>
+
+
+    <h1>Uppercase Name</h1>
+    
+    <div>
+        <label for="nameInput">Enter your name:</label>
+        <input type="text" id="nameInput" placeholder="Enter your name">
+    </div>
+
+    <button onclick="manipulateArrayName()">Enter</button>
+    
+    <div id="results">
+        <p id="upperCaseResult"></p>
+
+    </div>
+
+
+
+    
+    <script>
+        function addNumbers() {
+
+            const num1 = parseFloat(document.getElementById('number1').value);
+            const num2 = parseFloat(document.getElementById('number2').value);
+
+            const sum = num1 + num2;
+            
+            document.getElementById('sumResult').textContent = `Your age is :  ${sum}`;
+        }
+
+
+        function manipulateArrayName() {
+
+            const name = document.getElementById('nameInput').value;
+            
+            const upperCaseName = name.toUpperCase();
+            
+            document.getElementById('upperCaseResult').textContent = `Hello ${upperCaseName}, How are yow`;
+
+        }
+
+
+
+    </script>
+</body>
+</html>
